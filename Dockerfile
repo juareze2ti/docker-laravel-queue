@@ -48,4 +48,4 @@ RUN apt-get install --allow-unauthenticated -y unzip
 
 WORKDIR /var/www
 
-CMD ["sh", "-c", "php artisan queue:work redis --queue=$QUEUE --sleep=$SLEEP --tries=$TRIES --timeout=$TIMEOUT --delay=$DELAY --memory=$MEMORY"]
+CMD ["sh", "-c", "php artisan queue:work $DRIVER $OPCOES"]
